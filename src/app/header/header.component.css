@@ -1,0 +1,40 @@
+/* Style pour les liens dans la navbar */
+.navbar-nav .nav-link {
+  color: #ffffff; 
+}
+
+.navbar-nav .nav-link:hover {
+  color: #d4d4d4; 
+}
+
+/* Personnalisation du bouton hamburger */
+.navbar-toggler {
+  border: none; 
+}
+
+.navbar-toggler-icon {
+  width: 30px; 
+  height: 30px; 
+  
+  background-size: 100%; 
+  
+}
+
+.navbar-toggler-icon::before {
+  content: "\f0c9"; 
+  font-family: "Font Awesome 5 Free"; 
+  font-weight: 900; 
+  color: #ffffff; 
+  font-size: 24px; 
+}
+
+
+.navbar {
+  background-color: #021e3d; 
+}
+
+@media (max-width: 767.98px) {
+  .navbar-expand-lg .navbar-nav {
+    text-align: center;
+  }
+}
