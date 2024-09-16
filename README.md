@@ -13,6 +13,10 @@ Ce projet a été réalisé dans le cadre de ma formation et vise à développer
 4. **Statistiques de positionnement** :
    - Calcul de la moyenne des chiffres d'affaires pour l'utilisateur.
    - Comparaison avec la moyenne des autres salons au niveau national, régional et départemental.
+5. **Réinitialisation de Mot de Passe** :
+   - Demander la réinitialisation de Mot de Passe
+   - Recevoir un e-mail avec un lien de réinitialisation pour accéder à un formulaire sécurisé.
+   - Soumettre le nouveau mot de passe avec le token de réinitialisation.
 ## Technologies utilisées : 
 - **Angular Version 18.1.0**
 - **Bootstrap version 5.3.3**
