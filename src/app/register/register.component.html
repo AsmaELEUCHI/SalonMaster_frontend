@@ -1,0 +1,70 @@
+<!--formulaire d'inscription-->
+<div class="main-content">
+    <div class="auth-container">
+      <!-- Section d'inscription -->
+      <div class="auth-section">
+        <h2>Inscription</h2>
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" >
+          <div class="form-group">
+            <label for="salonName">Nom du Salon:</label>
+            <input id="salonName" formControlName="salonName" type="text" placeholder="Entrez le nom du salon" />
+            <small *ngIf="registerForm.get('salonName')?.invalid && registerForm.get('salonName')?.touched">
+              Le nom du salon est requis.
+            </small>
+          </div>
+          <div class="form-group">
+            <label for="representativeFirstName">Prénom du Représentant:</label>
+            <input id="representativeFirstName" formControlName="representativeFirstName" type="text" placeholder="Entrez le prénom du représentant" />
+            <small *ngIf="registerForm.get('representativeFirstName')?.invalid && registerForm.get('representativeFirstName')?.touched">
+              Le prénom est requis.
+            </small>
+          </div>
+          <div class="form-group">
+            <label for="representativeLastName">Nom du Représentant:</label>
+            <input id="representativeLastName" formControlName="representativeLastName" type="text" placeholder="Entrez le nom du représentant" />
+            <small *ngIf="registerForm.get('representativeLastName')?.invalid && registerForm.get('representativeLastName')?.touched">
+              Le nom est requis.
+            </small>
+          </div>
+          <div class="form-group">
+            <label for="salonAddress">Adresse du Salon:</label>
+            <input id="salonAddress" formControlName="salonAddress" type="text" placeholder="Entrez l'adresse du salon" />
+            <small *ngIf="registerForm.get('salonAddress')?.invalid && registerForm.get('salonAddress')?.touched">
+              L'adresse est requise.
+            </small>
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input id="email" formControlName="email" type="email" placeholder="Entrez votre email" />
+            <small *ngIf="registerForm.get('email')?.invalid && registerForm.get('email')?.touched">
+              Email est requis ou invalide.
+            </small>
+          </div>
+          <div class="form-group">
+            <label for="password">Mot de passe:</label>
+            <div class="password-wrapper">
+              <input type="password" id="hiddenInput"  >
+              <input id="password" formControlName="password" type="password" placeholder="Entrez votre mot de passe"  autocomplete="off"/>
+              <span class="toggle-password" (click)="togglePasswordVisibility('password')">
+                <i class="fas fa-key"></i>
+              </span>
+              </div>
+            <small *ngIf="registerForm.get('password')?.invalid && registerForm.get('password')?.touched">
+              Le mot de passe doit contenir au moins 8 caractères, une majuscule, un chiffre et un caractère spécial.
+            </small>
+          </div>
+          <div class="form-group">
+            <label for="confirmPassword">Confirmer le mot de passe:</label>
+            <div class="password-wrapper">
+              <input id="confirmPassword" formControlName="confirmPassword" type="password" placeholder="Confirmez votre mot de passe" />
+              <span class="toggle-password" (click)="togglePasswordVisibility('confirmPassword')">
+                <i class="fas fa-key"></i>
+              </span>
+            </div>
+            <small *ngIf="registerForm.hasError('mismatch') && registerForm.get('confirmPassword')?.touched">
+              Les mots de passe ne correspondent pas.
+            </small>
+          </div>
+          <button class="inscriptionButton" type="submit" [disabled]="registerForm.invalid">S'inscrire</button>
+        </form>
+      </div>
