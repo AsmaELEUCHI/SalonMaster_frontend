@@ -1,0 +1,49 @@
+
+<!-- Section d'affichage de l'historique des chiffre d'affaires -->
+<div class="historique-section">
+  <h2>Historique des Chiffres d'Affaires</h2>
+  <table *ngIf="historique.length > 0">
+    <thead>
+      <tr>
+        <th>Mois</th>
+        <th>Année</th>
+        <th>Chiffre d'Affaires (€)</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let entry of historique">
+        <td>{{ entry.mois }}</td>
+        <td>{{ entry.annee }}</td>
+        <td>{{ formatCurrency(entry.ca) }}</td>
+        <td>
+          <button (click)="deleteCa(entry.id)" class="btn btn-primary">
+            <i class="fas fa-trash"></i>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p *ngIf="historique.length === 0">Aucun chiffre d'affaires saisi.</p>
+</div>
+
+<!-- Formulaire de saisie de chiffres d'affaires -->
+  <div class="saisie-container">
+    <h2>Saisie du Chiffre d'Affaires</h2>
+    <form (ngSubmit)="onSubmit()" #chiffreAffairesForm="ngForm">
+      <div class="form-group">
+        <label for="mois">Mois:</label>
+        <input id="mois" name="mois" type="text" [(ngModel)]="mois" placeholder="Mois" required />
+      </div>
+      <div class="form-group">
+        <label for="annee">Année:</label>
+        <input id="annee" name="annee" type="number" [(ngModel)]="annee" placeholder="Année" required />
+      </div>
+      <div class="form-group">
+        <label for="ca">Chiffre d'Affaires:</label>
+        <input id="ca" name="ca" type="number" [(ngModel)]="ca" placeholder="Chiffre d'affaires" required />
+      </div>
+      <button type="submit">Enregistrer</button>
+      
+    </form>
+  </div>
