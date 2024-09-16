@@ -1,0 +1,61 @@
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+  }
+  
+  
+  /* Style pour le conteneur général de la page d'accueil */
+  .home-container {
+    background: linear-gradient(to bottom, 
+                              #f5f9fa 0%,     /* Couleur claire en haut */
+                              #e5f6f9 50%,    /* Couleur plus foncée au milieu */
+                              #f5f9fa 100%);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+  }
+  
+   
+  .home-content {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    text-align: center;
+    z-index: 1; 
+    margin-top: 60px;
+  }
+  
+ 
+  
+  /* Style pour les sections */
+  .features, .cta {
+    margin-bottom: 30px;
+  }
+  
+  .features ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .features li {
+    margin-bottom: 15px; 
+  }
+  
+  /* Styles pour les liens de navigation */
+  nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
