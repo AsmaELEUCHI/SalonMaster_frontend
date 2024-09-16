@@ -1,0 +1,35 @@
+
+<!--Forumulaire de mise à jour du profil salon dans l'espace personnel-->
+<div class="main-content">
+    <div class="profile-section">
+      <h2>Profil du Salon</h2>
+      <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="salonName">Nom du Salon:</label>
+          <input id="salonName" class="form-control" type="text" [(ngModel)]="salonName" name="salonName" placeholder="Nom du salon" />
+        </div>
+        <div class="form-group">
+          <label for="salonAddress">Adresse du Salon:</label>
+          <input id="salonAddress" class="form-control" type="text" [(ngModel)]="salonAddress" name="salonAddress" placeholder="Adresse du salon" />
+        </div>
+        <div class="form-group">
+          <label for="region">Région:</label>
+          <input id="region" class="form-control" type="text" [(ngModel)]="region" name="region" placeholder="votre région" />
+        </div>
+        <div class="form-group">
+          <label for="departement">Département:</label>
+          <input id="departement" class="form-control" type="text" [(ngModel)]="departement" name="departement" placeholder="Votre département" />
+        </div>
+        <div class="form-group">
+          <label for="openingDate">Date d'Ouverture:</label>
+          <input id="openingDate" class="form-control" type="date" [(ngModel)]="openingDate" name="openingDate" />
+        </div>
+        <div class="form-group">
+          <label for="employees">Nombre d'Employés (équivalent temps plein):</label>
+          <input id="employees" class="form-control" type="number" [(ngModel)]="numberOfEmployees" name="employees" placeholder="Nombre d'employés" />
+        </div>
+            <button type="submit" class="btn btn-primary">Mettre à jour</button>
+      </form>
+    </div>
+  </div>
+  
