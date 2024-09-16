@@ -1,0 +1,14 @@
+<!--Affichage de la moyenne de chiffre d'affaire du salon-->
+<div *ngIf="stats" class="stats-container">
+  <div class="user-stats">
+    <h2>Votre Chiffre d'Affaires</h2>
+    <p><strong>Moyenne CA de votre salon:</strong> {{ formatCurrency(stats.avgUserCa) }} €</p>
+  </div>
+<!--Affichage de statistiques générales-->
+  <div class="general-stats">
+    <h2>Statistiques Générales</h2>
+    <p><strong>Moyenne CA France:</strong> {{ formatCurrency(stats.avgFrance) }} €</p>
+    <p><strong>Moyenne CA Région:</strong> {{ formatCurrency(stats.avgRegion) }} €</p>
+    <p><strong>Moyenne CA Département:</strong> {{ formatCurrency(stats.avgDepartement) }} €</p>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+.stats-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.user-stats {
+  background-color: #cfebde;
+  color: #094908; 
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  width: 60%;
+}
+
+.general-stats {
+  background-color: #fffaf0; 
+  color: #ff4500; 
+  padding: 20px;
+  border-radius: 8px;
+  width: 60%;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
