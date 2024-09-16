@@ -37,27 +37,24 @@ Ce projet a été réalisé dans le cadre de ma formation et vise à développer
 -  src/app/interfaces : Définition des types et structures de données utilisés
 
 ## Installation : 
-Avant de lancer le projet, assurez-vous d'avoir les éléments suivants installés : Node.js, Angular CLI, Git
-Pour configurer le projet localement, suivez les étapes ci-dessous :
+Avant de commencer, s'assurer d'avoir les outils suivants : Node.js, Angular CLI, Git, IDE
 
-1. **Clonez le Dépôt** :
-   Ouvrez votre terminal et exécutez la commande suivante pour cloner le dépôt depuis GitHub :
+1. **Cloner le Dépôt** :
+  Exécution de la commande suivante pour cloner le dépôt depuis GitHub:
 
    ```powershell
    git clone https://github.com/AsmaELEUCHI/SalonMaster_frontend.git
 
    
 
-2. **Accédez au Dossier du Projet** :
-
-   Changez de répertoire pour accéder au dossier du projet :
+2. **Accéder au Dossier du Projet** :
 
    ```powershell
    cd SalonMaster_frontend
 
    ```
 
-3. **Installez les Dépendances** :
+3. **Installer les Dépendances** :
 
    ```powershell
    npm install
@@ -69,7 +66,10 @@ Pour configurer le projet localement, suivez les étapes ci-dessous :
    ng serve
    ```
 
-Une fois le serveur démarré, ouvrez votre navigateur et accédez à l'adresse suivante pour voir l'application en fonctionnement :
+Une fois le serveur démarré, ouvrez le navigateur et accédez à l'adresse suivante pour voir l'application en fonctionnement :
 http://localhost:4200/
+
+## Backend
+Pour le développement et les détails de la partie backend : https://github.com/AsmaELEUCHI/SalonMaster_backend.git
 
 
